@@ -64,11 +64,7 @@ $.ajax({
  * 
  * Detección del evento "change" en el <select> de marcas.
  * Cada vez que se cambia una marca, se actualiza la lista de modelos.
- * 
- * Nota: para detectar eventos también se podría haber usado Vue.js
- * (en lugar de jQuery), y de hecho sería aconsejable hacerlo así.
- * Documentación: https://vuejs.org/v2/guide/events.html
- */
+ 
 $("#select-brand").on("change", function() {
 
     var url = "https://ha.edu.uy/api/models?brand=" + salesApp.brandSelected;
@@ -88,11 +84,8 @@ $("#select-brand").on("change", function() {
  * 
  * Detección del evento "click" en el botón "filtrar".
  * Cada vez que se hace click, se cargan los autos vía AJAX.
- * 
- * Nota: para detectar eventos también se podría haber usado Vue.js
- * (en lugar de jQuery), y de hecho sería aconsejable hacerlo así.
- * Documentación: https://vuejs.org/v2/guide/events.html
- */
+ *
+ 
 $("#btn-filter").on("click", function() {
     loadCars();
 });
@@ -102,11 +95,7 @@ $("#btn-filter").on("click", function() {
  * CAMBIAR MONEDA.
  * 
  * Detección del evento "click" en el botón "cambiar moneda".
- * 
- * Nota: para detectar eventos también se podría haber usado Vue.js
- * (en lugar de jQuery), y de hecho sería aconsejable hacerlo así.
- * Documentación: https://vuejs.org/v2/guide/events.html
- */
+ *
 $("#btn-currency").on("click", function() {
     if (salesApp.currency == "USD") {
         salesApp.currency = "UYU";
